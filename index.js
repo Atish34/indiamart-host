@@ -11,7 +11,7 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(express.static("dist")) 
 app.use(cors({
-    origin: " https://indiamart-host.onrender.com",
+    origin: true,
     credentials: true
 }))
 app.use("/api/admin", adminProtected, require("./routes/admin.routes"))
